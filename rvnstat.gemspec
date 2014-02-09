@@ -22,6 +22,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_runtime_dependency "unicorn"
   spec.add_runtime_dependency "sinatra"
-  spec.add_runtime_dependency "chartkick"
   spec.add_runtime_dependency "vidibus-sysinfo"
 end

@@ -8,7 +8,6 @@ Ruby + Sinatra + Bootstrap + Highcharts + vnstat = awesome sauce!
  - vidibus-sysinfo
  - filesize
  - sinatra
- 
 ## Installation
 gem install rvnstat
 
@@ -16,7 +15,7 @@ gem install rvnstat
 
 You can run it via nginx/apache with passenger or with rackup.
 
- - Add your path to vnstat and the interface you want to pull data from in the config.yml file.
+ - Add your path to vnstat, port and the interface you want to pull data from in the config.yml file.
  - rackup config.ru
  - Access it via http://127.0.0.1:9292
 

@@ -3,5 +3,5 @@ require 'require.rb'
 require  './lib/app'
 Rack::Handler::WEBrick.run(
       App.new,
-      :Port => 9292
+      :Port => Rconfig.port
   )
