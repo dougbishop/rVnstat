@@ -1,0 +1,47 @@
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+  
+<script>
+$(function () {
+        $('#day_detail').highcharts({
+            chart: {
+                type: 'column',
+                backgroundColor: '#eee'
+            },
+            title: {
+                text: 'Bandwidth Detail'
+            },
+            xAxis: {
+                  categories: $('#day_detail').data('dates')
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Megabytes'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y:.1f} MBs</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Recieve',
+                data: $('#day_detail').data('rx')},
+                
+                {name: 'Transmit',
+                data: $('#day_detail').data('tx')
+            }]
+        });
+    });
+</script>
+<div id="day_detail" data-rx='<%= @rx %>' data-tx='<%= @tx %>' data-dates='<%= @dates %>'></div>

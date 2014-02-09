@@ -1,0 +1,20 @@
+.table td {
+   text-align: center;   
+}
+
+.table th {
+   text-align: center;   
+}
+
+.navbar {
+	filter: none !important;
+	box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+body { 
+    padding-top: 65px; 
+    background: #eee;
+}

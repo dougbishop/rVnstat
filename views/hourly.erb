@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">Hourly</h4>
+</div>
+
+<table id="hourly" class="table table-condensed">
+			<tr>
+				<th class="col-sm-1">Hour:</th>
+				<th class="col-sm-1">rx</th>
+				<th class="col-sm-1">tx:</th>
+			</tr>
+			<% @hour.each do |x|%>
+			<tr>
+				<td class="active"><%= x[:date]%>
+		  		<td class="active"><%= x[:rx]%>
+			    <td class="active"><%= x[:tx]%>
+			</tr>
+			<%end%>	
+</table>

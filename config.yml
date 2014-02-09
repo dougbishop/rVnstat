@@ -1,0 +1,2 @@
+vnstat_path: /usr/bin/vnstat
+interface: eth0

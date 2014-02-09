@@ -1,0 +1,57 @@
+<script>
+var chart; // global
+function requestData() {
+    $.ajax({
+        url: 'live',
+        success: function(point) {
+            var series = chart.series[0],
+                shift = series.data.length > 20; // shift if the series is 
+                                                 // longer than 20
+
+            // add the point
+            chart.series[0].addPoint(point, true, shift);
+            
+            // call it again after one second
+            setTimeout(requestData, 1000);    
+        },
+        cache: false
+    });
+}
+
+$(document).ready(function() {
+    chart = new Highcharts.Chart({
+        chart: {
+            renderTo: 'live_traffic',
+            defaultSeriesType: 'spline',
+            backgroundColor: '#eee',
+            events: {
+                load: requestData
+            }
+        },
+        title: {
+            text: 'Live Public Traffic'
+        },
+        xAxis: {
+            type: 'datetime',
+            tickPixelInterval: 150,
+            maxZoom: 20 * 1000
+        },
+        yAxis: {
+            minPadding: 0.2,
+            maxPadding: 0.2,
+            title: {
+                text: 'Megabits/Sec',
+                margin: 20
+            }
+        },
+        tooltip: {
+                valueSuffix: 'Mbs'
+            },
+        series: [{
+            name: 'eth0',
+            data: []
+        }]
+    });        
+});
+</script>
+<div id="live_traffic" style="min-width: 310px; height: 400px; margin: 0 auto"</div>
