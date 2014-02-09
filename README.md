@@ -9,7 +9,7 @@ Ruby + Sinatra + Bootstrap + Highcharts + vnstat = awesome sauce!
  - filesize
  - sinatra
 ## Installation
-gem install rvnstat
+gem install rvnstat or clone this repo for running with passenger.
 
 ## Usage
 
