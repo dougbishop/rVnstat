@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'config.rb'
+require 'app.rb'
 require 'vnstat'
 require	'yaml'
 require 'date'

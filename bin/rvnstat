@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 require 'require.rb'
-require  './lib/app'
+project_root = ENV['GEM_HOME']+"/gems/rvnstat"
+Dir.glob(project_root + '/views/*', &method(:require))
+
 Rack::Handler::WEBrick.run(
       App.new,
       :Port => Rconfig.port
