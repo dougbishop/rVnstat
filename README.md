@@ -8,6 +8,7 @@ Ruby + Sinatra + Bootstrap + Highcharts + vnstat = awesome sauce!
  - vidibus-sysinfo
  - filesize
  - sinatra
+ 
 ## Installation
 gem install rvnstat or clone this repo for running with passenger.
 
