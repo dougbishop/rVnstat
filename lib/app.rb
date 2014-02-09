@@ -65,7 +65,7 @@ end
  		  @top.push(:date => x[:date],:rx => x[:rx],:tx => x[:tx],:total => x[:total])
  		end
  	end
-  	erb :top_ten, :layout => false
+  	erb :top_ten
   end
   
   get '/monthly' do
@@ -78,7 +78,7 @@ end
       @top.push(:date => x[:date],:rx => x[:rx],:tx => x[:tx],:total => x[:total])
     end
   end
-    erb :monthly, :layout => false
+    erb :monthly
   end
 
   get '/hourly' do
@@ -91,7 +91,7 @@ end
       @hour.push(:date => x[:date],:rx => x[:krx],:tx => x[:ktx])
     end
   end
-    erb :hourly, :layout => false
+    erb :hourly
   end
 
 end
