@@ -37,7 +37,7 @@ end
 	 		@tx.push(x[:tx].to_i / 1024)
 			end
        	end
-       	erb :day_detail, :layout => false
+       	erb :day_detail
  end
  
   get '/day_total' do
@@ -52,7 +52,7 @@ end
 	 		@dates.push(x[:date])
 			end
        	end
-       	erb :day_total, :layout => false
+       	erb :day_total
     end
 
   get '/top_ten' do
