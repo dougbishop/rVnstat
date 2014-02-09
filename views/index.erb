@@ -1,9 +1,9 @@
 <script>
 
 $(document).ready(function(){
+    		 $('#live').load('/live_traffic');
              $('#total').load('/day_total');
-             $('#detail').load('/day_detail');
-             $('#live_traffic').load('/live_traffic');
+             $('#detail').load('/day_detail');			 
          });
 </script>
 
@@ -52,17 +52,17 @@ $(document).ready(function(){
         </div><!--/.nav-collapse -->
       </div>
     </div>
-<div id="top-row" class="col-xs-12"></div>
-    <div id="live_traffic" class="col-xs-6 col-xs-offset-3"></div></div>
-<div id="total" class="col-xs-6"></div>
-<div id="detail" class="col-xs-6"></div>
+	<div id="lt-container" class="col-xs-12">
+		<div id="live" class="col-xs-6 col-xs-offset-3"></div>
+	</div>
+	<div id="total" class="col-xs-6"></div>
+	<div id="detail" class="col-xs-6"></div>
 
-<div id="myModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        </div>
-    </div>
-</div>
+	<div id="myModal" class="modal fade">
+ 	   <div class="modal-dialog">
+       	 	<div class="modal-content"></div>
+    	</div>
+	</div>
 
 <script>
         $('#myModal').on('hidden.bs.modal', function () {

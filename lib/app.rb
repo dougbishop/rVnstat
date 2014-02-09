@@ -37,7 +37,7 @@ end
 	 		@tx.push(x[:tx].to_i / 1024)
 			end
        	end
-       	erb :day_detail
+       	erb :day_detail, :layout => false
  end
  
   get '/day_total' do
@@ -52,7 +52,7 @@ end
 	 		@dates.push(x[:date])
 			end
        	end
-       	erb :day_total
+       	erb :day_total, :layout => false
     end
 
   get '/top_ten' do
@@ -65,7 +65,7 @@ end
  		  @top.push(:date => x[:date],:rx => x[:rx],:tx => x[:tx],:total => x[:total])
  		end
  	end
-  	erb :top_ten
+  	erb :top_ten, :layout => false
   end
   
   get '/monthly' do
@@ -78,7 +78,7 @@ end
       @top.push(:date => x[:date],:rx => x[:rx],:tx => x[:tx],:total => x[:total])
     end
   end
-    erb :monthly
+    erb :monthly, :layout => false
   end
 
   get '/hourly' do
@@ -91,7 +91,7 @@ end
       @hour.push(:date => x[:date],:rx => x[:krx],:tx => x[:ktx])
     end
   end
-    erb :hourly
+    erb :hourly, :layout => false
   end
 
 end
