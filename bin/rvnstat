@@ -1,3 +1,7 @@
 #!/usr/bin/env ruby
-
-rackup config.ru
+require 'require.rb'
+require  './lib/app'
+Rack::Handler::WEBrick.run(
+      App.new,
+      :Port => 9292
+  )
