@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["doug@dougbishop.org"]
   spec.description   = %q{Sinatra GUI for vnstat}
   spec.summary       = %q{Sinatra + ruby + vnstat = coolness}
-  spec.homepage      = ""
-  spec.license       = "MIT"
+  spec.homepage      = "https://github.com/freshfrmthehood/rVnstat"
+  spec.license       = "GPL"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
