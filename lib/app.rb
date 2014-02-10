@@ -6,6 +6,11 @@ set :public_dir, './public'
 
 class App < Sinatra::Application
 
+  set :static, true                             # set up static file routing
+  set :public, ENV['GEM_HOME']+'/gems/rvnstat-1.0/public'
+  
+  set :views,  ENV['GEM_HOME']+'/gems/rvnstat-1.0/views'
+  
  get '/' do
   erb :index
  end
