@@ -19,7 +19,11 @@ You can run it via nginx/apache with passenger or with rackup.
  - Add your path to vnstat, port and the interface you want to pull data from in the rvnstat.yml file.
  - Place your rvnstat.yml in the folder where you run the binary:
  	- Run 'rvnstat' to start 	
- - Access it via http://127.0.0.1:port
+ - Access it via http://IP:port
+ 
+ ## Screen Shot
+ 
+ ![Alt text](ss.png "Screen Shot")
 
 ## Contributing
 
